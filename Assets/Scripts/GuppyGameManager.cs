@@ -133,6 +133,7 @@ public class GuppyGameManager : MonoBehaviour
         GetRandomColor();
         GetRandomPattern();
         Sorce.PlayOneShot(In_Game_Button_Click);
+        Fish_Catch_Animator.SetTrigger("Try");
     }
 
     public void OnGreenButton()
@@ -148,6 +149,7 @@ public class GuppyGameManager : MonoBehaviour
         GetRandomColor();
         GetRandomPattern();
         Sorce.PlayOneShot(In_Game_Button_Click);
+        Fish_Catch_Animator.SetTrigger("Try");
     }
 
     public void OnBlueButton()
@@ -163,6 +165,7 @@ public class GuppyGameManager : MonoBehaviour
         GetRandomColor();
         GetRandomPattern();
         Sorce.PlayOneShot(In_Game_Button_Click);
+        Fish_Catch_Animator.SetTrigger("Try");
     }
 
     public void OnYellowButton()
@@ -180,7 +183,7 @@ public class GuppyGameManager : MonoBehaviour
 
     private void FishCathced()
     {
-        if (correctClicks == 5)
+        if (correctClicks == 3)
         {
             Sorce.PlayOneShot(Caught_Fish);
             correctClicks = 0;
