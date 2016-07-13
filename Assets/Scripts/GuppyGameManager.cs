@@ -5,7 +5,7 @@ public class GuppyGameManager : MonoBehaviour
 {
     private int Changing_Number, Random_Number, Changing_Pattern, Random_Pattern, score, HighScore, HighScoreScore;
     private float Initial_Time, Time_Elapsed = 3f;
-    public Text Changing_color_Display, GameOver_Text, Score_Text, HighScore_Text, Menu_HighScore;
+    public Text Changing_color_Display, GameOver_Text, Score_Text, HighScore_Text, Menu_HighScore,GameOver_HighScore;
     public int correctClicks, NewScore;
     public float level_Timer, max_LevelTime, speed;
     public Animator Fish_Catch_Animator;
@@ -211,6 +211,8 @@ public class GuppyGameManager : MonoBehaviour
         {
             GameOver_panel.SetActive(true);
             GameOver_Text.text = "Guppies Caught: " + score;
+            GameOver_HighScore.text = "HighScore :" + HighScoreScore;
+
             gameStart = false;
         }
     }

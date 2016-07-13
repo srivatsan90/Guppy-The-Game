@@ -87,3 +87,7 @@ Library/metadata/00/00000000000000004000000000000000
 Library/metadata/c3/c367c848f55d8e04683b0cd0201ea1d4.info
 *.info
 Library/metadata/bc/bcca52b40e9b9d5498c78478a2edd7c9
+Library/assetDatabase3
+*.dwlt
+Library/metadata/00/00000000000000004000000000000000
+Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
