@@ -5,7 +5,7 @@ public class GuppyGameManager : MonoBehaviour
 {
     private int Changing_Number, Random_Number, Changing_Pattern, Random_Pattern, score, HighScore, HighScoreScore;
     private float Initial_Time, Time_Elapsed = 3f;
-    public Text Changing_color_Display, GameOver_Text, Score_Text, HighScore_Text, Menu_HighScore,GameOver_HighScore;
+    public Text Changing_color_Display, GameOver_Text, Score_Text, HighScore_Text, Menu_HighScore, GameOver_HighScore;
     public int correctClicks, NewScore;
     public float level_Timer, max_LevelTime, speed;
     public Animator Fish_Catch_Animator;
@@ -14,7 +14,7 @@ public class GuppyGameManager : MonoBehaviour
     private bool gameStart;
     public GameObject[] Images, Color_Patterns;
     public Image Timer_Image;
-    public AudioClip BG, Menu_Button_Click,In_Game_Button_Click,Caught_Fish;
+    public AudioClip BG, Menu_Button_Click, In_Game_Button_Click, Caught_Fish;
     private AudioSource Sorce;
 
     private void Start()
@@ -28,7 +28,6 @@ public class GuppyGameManager : MonoBehaviour
     private void Awake()
     {
         Sorce = GetComponent<AudioSource>();
-        
     }
 
     private void Update()
@@ -63,6 +62,11 @@ public class GuppyGameManager : MonoBehaviour
         FishMovement();
         //PlayerPrefs.DeleteAll();
         Timer_Image.fillAmount -= level_Timer / 105000;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("GameOver");
+        }
     }
 
     private void GetRandomColor()
